@@ -20,7 +20,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Set up Astro CLI
-        uses: astronomer/setup-astro-cli@v1
+        uses: astronomer/setup-astro-cli@v0.0.1
 
       - name: Parse DAGs
         run: astro dev parse
