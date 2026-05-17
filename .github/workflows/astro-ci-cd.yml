@@ -1,0 +1,29 @@
+name: Astro CI/CD Validation
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+    branches:
+      - main
+      - develop
+
+jobs:
+  validate-dags:
+    name: Validate Astro DAGs
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+
+      - name: Set up Astro CLI
+        uses: astronomer/setup-astro-cli@v0.0.1
+
+      - name: Parse DAGs
+        run: astro dev parse
+
+      - name: Run DAG tests
+        run: astro dev pytest
