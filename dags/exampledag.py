@@ -14,7 +14,7 @@ each Astronaut in the list retrieved from the API. This list will change
 depending on how many Astronauts are in space, and the DAG will adjust
 accordingly each time it runs.
 
-For more explanation and getting started instructions, see our Write your
+For more explanation and getting started instructions, see our Write yo
 first DAG tutorial: https://www.astronomer.io/docs/learn/get-started-with-airflow
 
 ![Picture of the ISS](https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2010/02/space_station_over_earth/10293696-3-eng-GB/Space_Station_over_Earth_card_full.jpg)
@@ -42,7 +42,7 @@ def example_astronauts():
     def get_astronauts(**context) -> list[dict]:
         """
         This task uses the requests library to retrieve a list of Astronauts
-        currently in space. The results are pushed to XCom with a specific key
+        currently in space. The results are pushed to XCom with a specific ke
         so they can be used in a downstream pipeline. The task returns a list
         of Astronauts to be used in the next task.
         """
@@ -55,7 +55,7 @@ def example_astronauts():
             print("API currently not available, using hardcoded data instead.")
             number_of_people_in_space = 12
             list_of_people_in_space = [
-                {"craft": "ISS", "name": "Oleg Kononenkoasdasdadas"},
+                {"craft": "ISS", "name": "Oleg Kononenkoasdasdadaswqqwqwfqf"},
                 {"craft": "ISS", "name": "Nikolai Chub"},
                 {"craft": "ISS", "name": "Tracy Caldwell Dyson"},
                 {"craft": "ISS", "name": "Matthew Dominick"},
